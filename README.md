@@ -59,9 +59,11 @@ cd StudentManagementSystem
 * Launch Intellij Idea IDE.
 * Go to >> New >> Project from existing Sources >> select you project folder and import it.
 * Right click on project and build it by option "Build Module".
+* Or goto terminal and type `mvn clean install` to build the project.
 
 ## 3. Run the Project
 * Follow below steps to run the project.
+* NOTE : Create table and add some dummy data, both things by using given sql files : `StudentManagementSystem\src\main\resources\db\schema.sql and data.sql`
 
 ## ☑️Manual Deployment on Tomcat
 1. **Package Your Application:** Ensure your Java project is packaged as a `.war` file. In IntelliJ IDEA, go to Build > Build Artifacts > Build.
