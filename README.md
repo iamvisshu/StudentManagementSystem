@@ -1,7 +1,4 @@
 # Student Management System 💻✨ : Created by @iamvisshu
-
-This is a Student Management System built with Java, Servlets, and MySQL for the backend, and HTML, CSS, and JavaScript for the frontend.
-
 ## 📃Table of Contents
 
 * About Student Management System 💻✨
@@ -102,6 +99,18 @@ mysql> mysql -u root -p
 mysql> USE student_db;
 mysql> select * from students;
 ```
+## 🌄IDE Screenshots
+- Tomcat setup in IDE
+  ![image](https://github.com/user-attachments/assets/9b0a8676-b6eb-49a6-a655-044963b7c3c3)
+
+- Debug in IDE
+  ![image](https://github.com/user-attachments/assets/a1d1eed1-e652-4923-9f71-a63837bd5e7f)
+
+- Poject Structure
+  ![image](https://github.com/user-attachments/assets/3a9df3a4-1303-4e61-9c0a-5c5f7ef8212a)
+
+
+
 
 ## 👫 Contributing:
 
