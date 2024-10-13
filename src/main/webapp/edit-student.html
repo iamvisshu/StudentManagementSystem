@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<h1>Edit Student</h1>
+<form id="edit-student-form" action="/StudentManagementSystem-1.0-SNAPSHOT/edit-student" method="post">
+    <input type="hidden" name="id" id="studentId">
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required><br>
+
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" id="phone" required><br>
+
+    <label for="course">Course:</label>
+    <input type="text" name="course" id="course" required><br>
+
+    <input type="submit" value="Update Student">
+</form>
+<a href="/StudentManagementSystem-1.0-SNAPSHOT/list-students.html">Back to Student List</a>
+
+<script>
+    function loadStudentData() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const studentId = urlParams.get('id');
+
+    if (studentId) {
+        console.log(`Fetching data for student ID: ${studentId}`); // Log fetch start
+
+        fetch(`/StudentManagementSystem-1.0-SNAPSHOT/edit-student?id=${studentId}`, {
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            console.log('Response received from server'); // Log server response
+            return response.json();
+        })
+        .then(student => {
+            if (student && student.id) {
+                console.log('Student data received:', student); // Log received data
+                populateForm(student); // Populate the form with received data
+            } else {
+                console.error('Invalid student data received:', student);
+            }
+        })
+        .catch(error => console.error('Error fetching student data:', error)); // Log errors
+    } else {
+        console.error('No student ID found in the URL');
+    }
+}
+
+function populateForm(student) {
+    document.getElementById('studentId').value = student.id;
+    document.getElementById('name').value = student.name;
+    document.getElementById('email').value = student.email;
+    document.getElementById('phone').value = student.phone;
+    document.getElementById('course').value = student.course;
+
+    console.log('Form populated with student data'); // Log form population
+}
+
+// Load student data when the page loads
+window.onload = function() {
+  setTimeout(loadStudentData, 5000);
+}
+
+</script>
+</body>
+</html>

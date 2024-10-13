@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<h1>Student List</h1>
+<table id="studentTable">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Course</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Student rows will be inserted here by JavaScript -->
+    </tbody>
+</table>
+<a href="index.html">Back to Home</a>
+
+<script>
+    // Function to load students and display them
+    function loadStudents() {
+        // Fetch the JSON data from the servlet
+        fetch('/StudentManagementSystem-1.0-SNAPSHOT/list-students')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.querySelector('#studentTable tbody');
+                tableBody.innerHTML = '';  // Clear any existing rows
+
+                // Populate the table with students
+                data.forEach(student => {
+                    const row = document.createElement('tr');
+
+                    row.innerHTML = `
+                        <td>${student.id}</td>
+                        <td>${student.name}</td>
+                        <td>${student.email}</td>
+                        <td>${student.phone}</td>
+                        <td>${student.course}</td>
+                        <td>
+                            <a href="/StudentManagementSystem-1.0-SNAPSHOT/edit-student?id=${student.id}">Edit</a>
+                            <a href="/StudentManagementSystem-1.0-SNAPSHOT/delete-student?id=${student.id}" onclick="return confirm('Are you sure?');">Delete</a>
+                        </td>
+                    `;
+
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching student list:', error));
+    }
+
+    // Load students when the page is loaded
+    window.onload = function() {
+        loadStudents();
+    };
+</script>
+</body>
+</html>
