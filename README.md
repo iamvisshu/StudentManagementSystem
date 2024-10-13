@@ -2,8 +2,6 @@
 
 This is a Student Management System built with Java, Servlets, and MySQL for the backend, and HTML, CSS, and JavaScript for the frontend.
 
----
-
 ## 📃Table of Contents
 
 * About Student Management System 💻✨
@@ -17,9 +15,8 @@ This is a Student Management System built with Java, Servlets, and MySQL for the
 * Contributing
 * License
 * Author
----
 
-## About Student Management System ✨
+## 📌About Student Management System ✨
 The Student Management System is a comprehensive web application designed for efficient management of student data. Built using Java, Servlets, and MySQL for the backend and HTML, CSS, and JavaScript for the frontend, this project aims to provide a seamless experience for handling basic CRUD operations.
 
 **Key features include:**
@@ -30,17 +27,13 @@ The Student Management System is a comprehensive web application designed for ef
 
 Whether you’re an educator, administrator, or developer, this system offers a practical solution for managing student information efficiently.
 
----
-
-## 🔨Features
+## ⭐Features
 
 - Basic CRUD operations with a simple web interface.
 - Add, edit, delete, and show list of students.
 - Perform all operations via UI/UX (WebPages).
 
----
-
-## 🔧Technologies Used
+## 🔩Technologies Used
 
 - Java 8
 - Servlets
@@ -48,16 +41,12 @@ Whether you’re an educator, administrator, or developer, this system offers a 
 - HTML/CSS
 - JavaScript
 
----
-
-## 🔨Prerequisites
+## 📋Prerequisites
 
 - Java 8 or higher
 - Maven
 - MySQL
 - Apache Tomcat Server
-
----
 
 ## 🔧Setup Instructions
 
@@ -77,9 +66,7 @@ cd StudentManagementSystem
 ## 3. Run the Project
 * Follow below steps to run the project.
 
----
-
-## Manual Deployment on Tomcat
+## ☑️Manual Deployment on Tomcat
 1. **Package Your Application:** Ensure your Java project is packaged as a `.war` file. In IntelliJ IDEA, go to Build > Build Artifacts > Build.
 
 2. **Locate the .war File:** The `.war` file will typically be found in the target directory of your project. In my case it was on path `C:\Users\xyz\Documents\StudentManagementSystem\target\StudentManagementSystem-1.0-SNAPSHOT.war`
@@ -92,9 +79,7 @@ cd StudentManagementSystem
 
 6. **Access Your Application:** Open your browser and go to `http://localhost:8080/StudentManagementSystem-1.0-SNAPSHOT/`
 
----
-
-## Access MySQL Client
+## ☑️Access MySQL Client
 
 ### On Windows
 1. Navigate to the MySQL installation directory: Typically, this is `C:\Program Files\MySQL\MySQL Server 8.0\bin`.
@@ -110,17 +95,13 @@ cd StudentManagementSystem
 
 2. Run MySQL Client: Simply type `mysql -u root -p` and hit Enter. Enter your password when prompted.
 
----
-
-## SQL Commands
+## ☑️SQL Commands
 
 ```bash
 mysql> mysql -u root -p
 mysql> USE student_db;
 mysql> select * from students;
 ```
-
----
 
 ## 👫 Contributing:
 
@@ -130,13 +111,9 @@ We welcome contributions to this project! If you'd like to contribute, please:
 2. Make your changes and create a pull request.
 3. Follow any coding style guidelines mentioned in the code (if any).
 
----
-
 ## 💳License:
 
 * This project is licensed under the Open-source [**MIT License**].
-
----
 
 ## ✒️Author:
 * @iamvisshu - Vishal Vishwakarma 😇
