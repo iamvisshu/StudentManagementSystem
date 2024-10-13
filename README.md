@@ -52,7 +52,7 @@ Whether you’re an educator, administrator, or developer, this system offers a 
 - In my case it was copied on path `C:\Users\xyz\Documents`
 
 ```bash
-git clone https://github.com/yourusername/StudentManagementSystem.git
+git clone https://github.com/iamvisshu/StudentManagementSystem.git
 cd StudentManagementSystem
 ```
 ### 2. Import Project in your IDE
